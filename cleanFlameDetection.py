@@ -2,7 +2,7 @@ import cv2
 
 # create a new cam object
 cap = cv2.VideoCapture(0)
-flame_cascade = cv2.CascadeClassifier("cascades/haarcascade_fontalface_default.xml")
+flame_cascade = cv2.CascadeClassifier("E:\DSL\Fire\data\flame_detction_cascade\cascade_retrain_flame.xml")
 
 while True:
     # read the image from the cam
@@ -12,6 +12,7 @@ while True:
 
     for x, y, width, height in faces:
         cv2.rectangle(image, (x, y), (x + width, y + height), color=(255, 0, 0), thickness=2)
+        cv2.putText(image,"Flame",(x,y-5),cv2.FONT_HERSHEY_COMPLEX_SMALL,1,2)
     cv2.imshow("image", image)
     if cv2.waitKey(1) == ord("q"):
         break
