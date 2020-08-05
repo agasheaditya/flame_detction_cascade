@@ -2,7 +2,11 @@ import cv2
 
 # create a new cam object
 cap = cv2.VideoCapture(0)
+<<<<<<< HEAD
 flame_cascade = cv2.CascadeClassifier("cascade_retrain_flame.xml")
+=======
+flame_cascade = cv2.CascadeClassifier("E:\DSL\Fire\data\flame_detction_cascade\cascade_retrain_flame.xml")
+>>>>>>> 30ccaa62648faf7c1ee7100ef4671b0d6d370600
 
 while True:
     # read the image from the cam
