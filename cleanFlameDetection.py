@@ -1,3 +1,4 @@
+
 import cv2
 
 # create a new cam object
@@ -15,6 +16,9 @@ while True:
         cv2.putText(image,"Flame",(x,y-5),cv2.FONT_HERSHEY_COMPLEX_SMALL,1,2)
     print("No Flame")
     cv2.imshow("image", image)
+    if len(faces) == 0:
+        print("NO FLAME")
+        continue
     if cv2.waitKey(1) == ord("q"):
         break
 
